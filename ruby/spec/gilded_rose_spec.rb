@@ -3,10 +3,7 @@
 require 'gilded_rose'
 
 describe GildedRose do
-  before(:each) do
-    @conjured_item = [Item.new('Conjured Mana Cake', 5, 10)]
-  end
-  
+
   describe '#update_quality:' do
     describe 'Generic Items:' do
       before(:each) do
@@ -86,6 +83,10 @@ describe GildedRose do
         @ten_day_pass = [Item.new('Backstage passes to a TAFKAL80ETC concert', 10, 10)]
         @eleven_day_pass = [Item.new('Backstage passes to a TAFKAL80ETC concert', 11, 10)]
       end
+      it 'Does not change the name.' do
+        GildedRose.new(@expired_pass).update_quality
+        expect(@expired_pass[0].name).to eq 'Backstage passes to a TAFKAL80ETC concert'
+      end
       it 'Reduces pass quality to 0 when sell_in is less than 0.' do
         GildedRose.new(@expired_pass).update_quality
         expect(@expired_pass[0].quality).to eq 0
@@ -108,6 +109,9 @@ describe GildedRose do
       end
     end
     describe 'Conjured Items:' do
+      before(:each) do
+        @conjured_item = [Item.new('Conjured Mana Cake', 5, 10)]
+      end
       xit 'Reduces the quality of conjured items twice as much.' do
         GildedRose.new(@conjured_item).update_quality
         expect(@conjured_item[0].quality).to eq
