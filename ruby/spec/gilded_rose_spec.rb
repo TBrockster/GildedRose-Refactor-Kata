@@ -4,9 +4,9 @@ require 'gilded_rose'
 
 describe GildedRose do
   before(:each) do
-    @sulfuras = [Item.new('Sulfuras, Hand of Ragnaros', 1, 80)]
     @conjured_item = [Item.new('Conjured Mana Cake', 5, 10)]
   end
+  
   describe '#update_quality:' do
     describe 'Generic Items:' do
       before(:each) do
@@ -35,7 +35,8 @@ describe GildedRose do
         expect(@low_quality_items[0].quality).to eq 0
       end
     end
-    describe 'Aged Brie' do
+    
+    describe 'Aged Brie:' do
       before(:each) do
         @aged_brie = [Item.new('Aged Brie', 10, 0)]
         @high_quality_brie = [Item.new('Aged Brie', 10, 50)]
@@ -57,15 +58,22 @@ describe GildedRose do
         expect(@high_quality_brie[0].quality).to eq 50
       end
     end
-    it 'Does not change the SellIn or quality of Sulfuras' do
-      GildedRose.new(@sulfuras).update_quality
-      expect(@sulfuras[0].sell_in).to eq 1
-      expect(@sulfuras[0].quality).to eq 80
+    
+    describe 'Sulfuras, Hand of Ragnaros:' do
+      before(:each) do
+        @sulfuras = [Item.new('Sulfuras, Hand of Ragnaros', 1, 80)]
+      end
+      it 'Does not change the name.' do
+        GildedRose.new(@sulfuras).update_quality
+        expect(@sulfuras[0].name).to eq 'Sulfuras, Hand of Ragnaros'
+      end
+      it 'Does not change the SellIn or quality of Sulfuras' do
+        GildedRose.new(@sulfuras).update_quality
+        expect(@sulfuras[0].sell_in).to eq 1
+        expect(@sulfuras[0].quality).to eq 80
+      end
     end
-    xit 'Reduces the quality of conjured items twice as much' do
-      GildedRose.new(@conjured_item).update_quality
-      expect(@conjured_item[0].quality).to eq
-    end
+
     describe 'Backstage Pass criteria:' do
       before(:each) do
         @expired_pass = [Item.new('Backstage passes to a TAFKAL80ETC concert', 0, 10)]
@@ -94,6 +102,12 @@ describe GildedRose do
       it 'Increases pass quality by 1 while sell_in > 10' do
         GildedRose.new(@eleven_day_pass).update_quality
         expect(@eleven_day_pass[0].quality).to eq 11
+      end
+    end
+    describe 'Conjured Items:' do
+      xit 'Reduces the quality of conjured items twice as much' do
+        GildedRose.new(@conjured_item).update_quality
+        expect(@conjured_item[0].quality).to eq
       end
     end
   end
