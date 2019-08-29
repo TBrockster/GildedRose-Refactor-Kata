@@ -87,6 +87,10 @@ describe GildedRose do
         GildedRose.new(@expired_pass).update_quality
         expect(@expired_pass[0].name).to eq 'Backstage passes to a TAFKAL80ETC concert'
       end
+      it 'Decreases sell_in value by 1.' do
+        GildedRose.new(@expired_pass).update_quality
+        expect(@expired_pass[0].sell_in).to eq(-1)
+      end
       it 'Reduces pass quality to 0 when sell_in is less than 0.' do
         GildedRose.new(@expired_pass).update_quality
         expect(@expired_pass[0].quality).to eq 0
