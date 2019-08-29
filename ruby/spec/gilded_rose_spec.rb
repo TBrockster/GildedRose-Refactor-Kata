@@ -44,6 +44,10 @@ describe GildedRose do
         GildedRose.new(@aged_brie).update_quality
         expect(@aged_brie[0].name).to eq 'Aged Brie'
       end
+      it 'Decreases SellIn value by 1.' do
+        GildedRose.new(@aged_brie).update_quality
+        expect(@aged_brie[0].sell_in).to eq 9
+      end
       it 'Increases the quality of Aged Brie' do
         GildedRose.new(@aged_brie).update_quality
         expect(@aged_brie[0].quality).to eq 1
