@@ -1,20 +1,22 @@
+# frozen_string_literal: true
+
 require 'gilded_rose'
 
 describe GildedRose do
   before(:each) do
-    @fresh_items = [Item.new("foo", 200, 50)]
-    @stale_items = [Item.new("foo", 0, 50)]
-    @low_quality_items = [Item.new("foo", 0, 0)]
-    @aged_brie = [Item.new("Aged Brie", 10, 0)]
-    @high_quality_brie = [Item.new("Aged Brie", 10, 50)]
-    @sulfuras = [Item.new("Sulfuras, Hand of Ragnaros", 1, 80)]
-    @conjured_item = [Item.new("Conjured Mana Cake", 5, 10)]
+    @fresh_items = [Item.new('foo', 200, 50)]
+    @stale_items = [Item.new('foo', 0, 50)]
+    @low_quality_items = [Item.new('foo', 0, 0)]
+    @aged_brie = [Item.new('Aged Brie', 10, 0)]
+    @high_quality_brie = [Item.new('Aged Brie', 10, 50)]
+    @sulfuras = [Item.new('Sulfuras, Hand of Ragnaros', 1, 80)]
+    @conjured_item = [Item.new('Conjured Mana Cake', 5, 10)]
   end
   describe '#update_quality:' do
     describe 'Simple criteria:' do
-      it 'Does not change the name.' do 
+      it 'Does not change the name.' do
         GildedRose.new(@fresh_items).update_quality
-        expect(@fresh_items[0].name).to eq "foo"
+        expect(@fresh_items[0].name).to eq 'foo'
       end
       it 'Decreases Quality value by 1, while SellIn is greater than 0.' do
         GildedRose.new(@fresh_items).update_quality
@@ -52,14 +54,14 @@ describe GildedRose do
         GildedRose.new(@conjured_item).update_quality
         expect(@conjured_item[0].quality).to eq
       end
-      describe 'Backstage Pass criteria' do
+      describe 'Backstage Pass criteria:' do
         before(:each) do
-          @expired_pass = [Item.new("Backstage passes to a TAFKAL80ETC concert", 0, 10)]
-          @one_day_pass = [Item.new("Backstage passes to a TAFKAL80ETC concert", 1, 10)]
-          @five_day_pass = [Item.new("Backstage passes to a TAFKAL80ETC concert", 5, 10)]
-          @six_day_pass = [Item.new("Backstage passes to a TAFKAL80ETC concert", 6, 10)]
-          @ten_day_pass = [Item.new("Backstage passes to a TAFKAL80ETC concert", 10, 10)]
-          @eleven_day_pass = [Item.new("Backstage passes to a TAFKAL80ETC concert", 11, 10)]
+          @expired_pass = [Item.new('Backstage passes to a TAFKAL80ETC concert', 0, 10)]
+          @one_day_pass = [Item.new('Backstage passes to a TAFKAL80ETC concert', 1, 10)]
+          @five_day_pass = [Item.new('Backstage passes to a TAFKAL80ETC concert', 5, 10)]
+          @six_day_pass = [Item.new('Backstage passes to a TAFKAL80ETC concert', 6, 10)]
+          @ten_day_pass = [Item.new('Backstage passes to a TAFKAL80ETC concert', 10, 10)]
+          @eleven_day_pass = [Item.new('Backstage passes to a TAFKAL80ETC concert', 11, 10)]
         end
         it 'Reduces pass quality to 0 when sell in < 0' do
           GildedRose.new(@expired_pass).update_quality
