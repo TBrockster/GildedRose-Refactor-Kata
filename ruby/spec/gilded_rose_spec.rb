@@ -3,8 +3,8 @@
 require 'gilded_rose'
 
 describe GildedRose do
-
   describe '#update_quality:' do
+
     describe 'Generic Items:' do
       before(:each) do
         @fresh_items = [Item.new('foo', 200, 50)]
@@ -38,10 +38,6 @@ describe GildedRose do
         @aged_brie = [Item.new('Aged Brie', 10, 0)]
         @high_quality_brie = [Item.new('Aged Brie', 10, 50)]
       end
-      it 'Does not change the name.' do
-        GildedRose.new(@aged_brie).update_quality
-        expect(@aged_brie[0].name).to eq 'Aged Brie'
-      end
       it 'Decreases sell_in value by 1.' do
         GildedRose.new(@aged_brie).update_quality
         expect(@aged_brie[0].sell_in).to eq 9
@@ -59,10 +55,6 @@ describe GildedRose do
     describe 'Sulfuras, Hand of Ragnaros:' do
       before(:each) do
         @sulfuras = [Item.new('Sulfuras, Hand of Ragnaros', 1, 80)]
-      end
-      it 'Does not change the name.' do
-        GildedRose.new(@sulfuras).update_quality
-        expect(@sulfuras[0].name).to eq 'Sulfuras, Hand of Ragnaros'
       end
       it 'Does not change the sell_in of Sulfuras.' do
         GildedRose.new(@sulfuras).update_quality
@@ -82,10 +74,6 @@ describe GildedRose do
         @six_day_pass = [Item.new('Backstage passes to a TAFKAL80ETC concert', 6, 10)]
         @ten_day_pass = [Item.new('Backstage passes to a TAFKAL80ETC concert', 10, 10)]
         @eleven_day_pass = [Item.new('Backstage passes to a TAFKAL80ETC concert', 11, 10)]
-      end
-      it 'Does not change the name.' do
-        GildedRose.new(@expired_pass).update_quality
-        expect(@expired_pass[0].name).to eq 'Backstage passes to a TAFKAL80ETC concert'
       end
       it 'Decreases sell_in value by 1.' do
         GildedRose.new(@expired_pass).update_quality
@@ -112,6 +100,7 @@ describe GildedRose do
         expect(@eleven_day_pass[0].quality).to eq 11
       end
     end
+
     describe 'Conjured Items:' do
       before(:each) do
         @conjured_item = [Item.new('Conjured Mana Cake', 5, 10)]
