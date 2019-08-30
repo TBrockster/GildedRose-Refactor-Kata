@@ -4,16 +4,11 @@ require 'gilded_rose'
 
 describe GildedRose do
   describe '#update_quality:' do
-
     describe 'Generic Items:' do
       before(:each) do
         @fresh_items = [Item.new('foo', 200, 50)]
         @stale_items = [Item.new('foo', 0, 50)]
         @low_quality_items = [Item.new('foo', 0, 0)]
-      end
-      it 'Does not change the name.' do
-        GildedRose.new(@fresh_items).update_quality
-        expect(@fresh_items[0].name).to eq 'foo'
       end
       it 'Decreases sell_in value by 1.' do
         GildedRose.new(@fresh_items).update_quality
