@@ -100,6 +100,10 @@ describe GildedRose do
       before(:each) do
         @conjured_item = [Item.new('Conjured Mana Cake', 5, 10)]
       end
+      it 'Decreases sell_in value by 1.' do
+        GildedRose.new(@conjured_item).update_inventory
+        expect(@conjured_item[0].sell_in).to eq(4)
+      end
       it 'Reduces the quality of conjured items twice as much.' do
         GildedRose.new(@conjured_item).update_inventory
         expect(@conjured_item[0].quality).to eq 8
