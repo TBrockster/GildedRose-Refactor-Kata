@@ -2,8 +2,7 @@
 
 # handles updating the store inventory at the end of each day.
 class GildedRose
-  SELL_IN_EXCEPTIONS = ['Sulfuras, Hand of Ragnaros'].freeze
-  QUALITY_EXCEPTIONS = ['Sulfuras, Hand of Ragnaros'].freeze
+  LEGENDARY_EXCEPTIONS = ['Sulfuras, Hand of Ragnaros'].freeze
 
   def initialize(items)
     @items = items
@@ -11,21 +10,19 @@ class GildedRose
 
   def update_inventory
     @items.each do |item|
+      next if LEGENDARY_EXCEPTIONS.include? item.name
+
       update_sell_in(item)
       update_quality(item)
     end
   end
 
   def update_sell_in(item)
-    return if SELL_IN_EXCEPTIONS.include? item.name
-
     item.sell_in -= 1
   end
 
   def update_quality(item)
     case item.name
-    when 'Sulfuras, Hand of Ragnaros'
-      # nothing effects Sulfuras, Hand of Ragnaros! (except RuboCop warnings)
     when 'Backstage passes to a TAFKAL80ETC concert'
       update_backstage_pass_quality(item)
     when 'Aged Brie'
@@ -35,14 +32,14 @@ class GildedRose
     else
       item.quality -= item.sell_in.negative? ? 2 : 1
     end
-    item_quality_check(item)
+    item_quality_boundary_check(item)
   end
 
   def update_backstage_pass_quality(item)
     case item.sell_in
     when 10..(1.0 / 0)
       item.quality += 1
-    when 5...10
+    when 5..9
       item.quality += 2
     when 0..5
       item.quality += 3
@@ -51,18 +48,16 @@ class GildedRose
     end
   end
 
-  def item_quality_check(item)
-    return if QUALITY_EXCEPTIONS.include? item.name
-
+  def item_quality_boundary_check(item)
     item.quality = 0 if item.quality.negative?
     item.quality = 50 if item.quality > 50
   end
 end
 
-# defines if an item is 'conjured'
+# defines if an item is 'conjured'.
 class Conjured
   def self.===(item)
-    item.include?('Conjured')
+    item[0..7].include?('Conjured')
   end
 end
 
