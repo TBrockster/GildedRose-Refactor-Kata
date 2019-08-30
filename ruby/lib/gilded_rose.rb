@@ -4,6 +4,7 @@
 class GildedRose
   SELL_IN_EXCEPTIONS = ['Sulfuras, Hand of Ragnaros'].freeze
   QUALITY_EXCEPTIONS = ['Sulfuras, Hand of Ragnaros'].freeze
+
   def initialize(items)
     @items = items
   end
@@ -29,6 +30,8 @@ class GildedRose
       update_backstage_pass_quality(item)
     when 'Aged Brie'
       item.quality += 1
+    when Conjured
+      item.quality -= 2
     else
       item.quality -= item.sell_in.negative? ? 2 : 1
     end
@@ -53,6 +56,13 @@ class GildedRose
 
     item.quality = 0 if item.quality.negative?
     item.quality = 50 if item.quality > 50
+  end
+end
+
+# defines if an item is 'conjured'
+class Conjured
+  def self.===(item)
+    item.include?('Conjured')
   end
 end
 

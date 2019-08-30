@@ -100,9 +100,9 @@ describe GildedRose do
       before(:each) do
         @conjured_item = [Item.new('Conjured Mana Cake', 5, 10)]
       end
-      xit 'Reduces the quality of conjured items twice as much.' do
+      it 'Reduces the quality of conjured items twice as much.' do
         GildedRose.new(@conjured_item).update_inventory
-        expect(@conjured_item[0].quality).to eq
+        expect(@conjured_item[0].quality).to eq 8
       end
     end
   end
