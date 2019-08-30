@@ -17,9 +17,13 @@ The purpose of this kata is to refactor existing complicated code into easy-to-c
 ## Approach
 
 At first I found this kata quite frustrating, as it begins in a rather messy nest of 'if-else' statements, seemingly designed to be annoying. On the surface it would be rather simple to add an extra if statement to account for conjured items, or to simply delete the whole thing and start from scratch, but the constraint of small refactoring steps helped solidify my direction. 
+
 I began by writing tests for 'generic items', and then expanding it out for the special functionalities of various items. A restriction on changing the Item class stopped me considering making new classes for the special items, and it meant that I didn't double the Item class in my tests. 
+
 Since I am used to TDD, I found it strange to be writing tests that should pass immediately, but once I had written all these passing tests to match the described functionality I move the entire 'if-else' block into the else section of a 'case' statement. Then I began to remove sections of the large, original 'if-else block', into the 'when' block of the 'case' statement, doing some minor refactoring as I went, and ensuring that my tests still passed. 
-Once the entire 'if-else' statement had been moved into the 'case' statement, I began to restructure the code a bit more, changing the 'update_quality' method into a 'update_inventory' method, and extracting out'update_sell_in' and 'update_quality' methods. I had an internal debate on how to handle 'Sulfuras, Hand of Ragnaros'. Did I give it an exclusion in the 'update_sell_in' and 'update_quality' methods, and call them both just once, or did I call them within each of the other 'when' blocks? Eventually I decided on guard statements, as this also allowed me to remove the "when 'Sulfuras, Hand of Ragnaors'" block, and leaves easy room to add further exceptions in the future. 
+
+Once the entire 'if-else' statement had been moved into the 'case' statement, I began to restructure the code a bit more, changing the 'update_quality' method into a 'update_inventory' method, and extracting out'update_sell_in' and 'update_quality' methods. I had an internal debate on how to handle 'Sulfuras, Hand of Ragnaros'. Did I give it an exclusion in the 'update_sell_in' and 'update_quality' methods, and call them both just once, or did I call them within each of the other 'when' blocks? Eventually I decided on guard statements, as this also allowed me to remove the "when 'Sulfuras, Hand of Ragnaros'" block, and leaves easy room to add further exceptions in the future. 
+
 Another issue was reducing the cyclomatic complexity of the 'update_quality' method, which lead to backstage passes having their own 'update_backstage_pass_quality' method, and lead to the item_quality_boundary_check method. 
 Finally, I debated how to deal with the RuboCop warning for method length on the 'update_quality' method, but ultimately decided that going over 10 LoC is inevitable in some case statements, and anything I did to bring it under that value would make the could less readable, less changeable, and therefore worse.
 
@@ -31,13 +35,21 @@ Finally, I debated how to deal with the RuboCop warning for method length on the
 
 items = [
   Item.new(name = '+5 Dexterity Vest', sell_in = 10, quality = 20),
+  
   Item.new(name = 'Aged Brie', sell_in = 2, quality = 0),
+  
   Item.new(name = 'Elixir of the Mongoose', sell_in = 5, quality = 7),
+  
   Item.new(name = 'Sulfuras, Hand of Ragnaros', sell_in = 0, quality = 80),
+  
   Item.new(name = 'Sulfuras, Hand of Ragnaros', sell_in = -1, quality = 80),
+  
   Item.new(name = 'Backstage passes to a TAFKAL80ETC concert', sell_in = 15, quality = 20),
+  
   Item.new(name = 'Backstage passes to a TAFKAL80ETC concert', sell_in = 10, quality = 49),
+  
   Item.new(name = 'Backstage passes to a TAFKAL80ETC concert', sell_in = 5, quality = 49),
+  
   Item.new(name = 'Conjured Mana Cake', sell_in = 3, quality = 6)
 ]
 
