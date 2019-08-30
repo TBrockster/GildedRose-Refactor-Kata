@@ -99,6 +99,7 @@ describe GildedRose do
     describe 'Conjured Items:' do
       before(:each) do
         @conjured_item = [Item.new('Conjured Mana Cake', 5, 10)]
+        @stale_conjured_item = [Item.new('Conjured Mana Cake', 0, 10)]
         @low_quality_conjured_item = [Item.new('Conjured Mana Cake', 5, 0)]
       end
       it 'Decreases sell_in value by 1.' do
@@ -108,6 +109,10 @@ describe GildedRose do
       it 'Reduces the quality of conjured items by 2 while sell_in is 0 or higher.' do
         GildedRose.new(@conjured_item).update_inventory
         expect(@conjured_item[0].quality).to eq 8
+      end
+      it 'Reduces the quality of conjured items by 2 while sell_in is below 0' do
+        GildedRose.new(@stale_conjured_item).update_inventory
+        expect(@stale_conjured_item[0].quality).to eq 6
       end
       it 'Does not reduce the quality of an item to a negtive amount.' do
         GildedRose.new(@low_quality_conjured_item).update_inventory

@@ -31,7 +31,7 @@ class GildedRose
     when 'Aged Brie'
       item.quality += 1
     when Conjured
-      item.quality -= 2
+      item.quality -= item.sell_in.negative? ? 4 : 2
     else
       item.quality -= item.sell_in.negative? ? 2 : 1
     end
