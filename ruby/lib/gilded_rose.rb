@@ -10,7 +10,6 @@ class GildedRose
     @items.each do |item|
       update_sell_in(item)
       update_quality(item)
-      
     end
   end
 
