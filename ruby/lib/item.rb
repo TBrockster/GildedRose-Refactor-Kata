@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# this is the unchangeable SuperClass that other items inherit from.
 class Item
   attr_accessor :name, :sell_in, :quality
 

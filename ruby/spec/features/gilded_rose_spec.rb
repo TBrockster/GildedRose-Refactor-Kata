@@ -110,7 +110,7 @@ describe GildedRose do
         GildedRose.new(@conjured_item).update_inventory
         expect(@conjured_item[0].quality).to eq 8
       end
-      it 'Reduces the quality of conjured items by 4 while sell_in is less than 0' do
+      it 'Reduces the quality of conjured items by 4 while sell_in is less than 0.' do
         GildedRose.new(@stale_conjured_item).update_inventory
         expect(@stale_conjured_item[0].quality).to eq 6
       end

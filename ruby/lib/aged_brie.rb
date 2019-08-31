@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# this class models the AgedBrie item type.
 class AgedBrie < Item
   def update_sell_in
     @sell_in -= 1

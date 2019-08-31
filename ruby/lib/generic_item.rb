@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# this class models the Generic item type.
 class GenericItem < Item
   def update_sell_in
     @sell_in -= 1

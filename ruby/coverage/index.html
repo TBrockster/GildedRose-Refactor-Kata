@@ -14,26 +14,26 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-08-31T23:40:41+01:00">2019-08-31T23:40:41+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-09-01T00:13:31+01:00">2019-09-01T00:13:31+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">99.28%</span></span>
+    (<span class="covered_percent"><span class="green">99.32%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.47
+         3.34
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>8</b> files in total.
-    <b>139</b> relevant lines. 
-    <span class="green"><b>138</b> lines covered</span> and
+    <b>9</b> files in total.
+    <b>148</b> relevant lines. 
+    <span class="green"><b>147</b> lines covered</span> and
     <span class="red"><b>1</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -53,17 +53,17 @@
       <tr>
         <td class="strong"><a href="#a480bf582efeba3f66f4eefa49249fef866f8dc0" class="src_link" title="lib/aged_brie.rb">lib/aged_brie.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>13</td>
+        <td>14</td>
         <td>6</td>
         <td>6</td>
         <td>0</td>
-        <td>1.8</td>
+        <td>2.0</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#e8536110429f3a593b2ccb9424241418f7dd7e30" class="src_link" title="lib/backstage_pass.rb">lib/backstage_pass.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>20</td>
+        <td>21</td>
         <td>11</td>
         <td>11</td>
         <td>0</td>
@@ -73,7 +73,7 @@
       <tr>
         <td class="strong"><a href="#cc05719fe141d369164ccb0fdd843b15ce72964b" class="src_link" title="lib/conjured_item.rb">lib/conjured_item.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>13</td>
+        <td>14</td>
         <td>6</td>
         <td>6</td>
         <td>0</td>
@@ -83,7 +83,7 @@
       <tr>
         <td class="strong"><a href="#47741bc8a6a925facd4ce50f15f1fe34af84875e" class="src_link" title="lib/generic_item.rb">lib/generic_item.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>13</td>
+        <td>14</td>
         <td>6</td>
         <td>6</td>
         <td>0</td>
@@ -103,17 +103,17 @@
       <tr>
         <td class="strong"><a href="#1b7bf0a3848b946ec991e1f6e21bcbf15bcb577e" class="src_link" title="lib/item.rb">lib/item.rb</a></td>
         <td class="yellow strong">87.5 %</td>
-        <td>15</td>
+        <td>16</td>
         <td>8</td>
         <td>7</td>
         <td>1</td>
-        <td>23.8</td>
+        <td>24.1</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#b66c95a7885d36d9981522aaef7f50a67be7e682" class="src_link" title="lib/legendary_item.rb">lib/legendary_item.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>7</td>
+        <td>8</td>
         <td>3</td>
         <td>3</td>
         <td>0</td>
@@ -128,6 +128,16 @@
         <td>86</td>
         <td>0</td>
         <td>1.5</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#cb778fd19e8cf7f4a4491bd5d22ec8c001e80328" class="src_link" title="spec/units/aged_brie_spec.rb">spec/units/aged_brie_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>15</td>
+        <td>9</td>
+        <td>9</td>
+        <td>0</td>
+        <td>1.0</td>
       </tr>
       
     </tbody>
@@ -172,67 +182,73 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="3">
           
-          <code class="ruby">class AgedBrie &lt; Item</code>
+          
+          <code class="ruby"># this class models the AgedBrie item type.</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
+          <code class="ruby">class AgedBrie &lt; Item</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
           <code class="ruby">  def update_sell_in</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="5">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="6">
+          <span class="hits">4</span>
           
           <code class="ruby">    @sell_in -= 1</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="6">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
+        <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
           <code class="ruby">  def update_quality</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="9">
+        <li class="covered" data-hits="3" data-linenumber="10">
           <span class="hits">3</span>
           
           <code class="ruby">    return if @quality &gt;= 50</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="11">
+        <li class="covered" data-hits="2" data-linenumber="12">
           <span class="hits">2</span>
           
           <code class="ruby">    @quality += 1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">end</code>
@@ -269,109 +285,115 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="3">
           
-          <code class="ruby">class BackstagePass &lt; Item</code>
+          
+          <code class="ruby"># this class models the BackstagePass item type.</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
+          <code class="ruby">class BackstagePass &lt; Item</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
           <code class="ruby">  def update_sell_in</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="5">
+        <li class="covered" data-hits="7" data-linenumber="6">
           <span class="hits">7</span>
           
           <code class="ruby">    @sell_in -= 1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
+        <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
           <code class="ruby">  def update_quality</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="9">
+        <li class="covered" data-hits="7" data-linenumber="10">
           <span class="hits">7</span>
           
           <code class="ruby">    case @sell_in</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="10">
+        <li class="covered" data-hits="7" data-linenumber="11">
           <span class="hits">7</span>
           
           <code class="ruby">    when 10..(1.0 / 0)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
           <code class="ruby">      @quality += 1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">    when 5..9</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="13">
+        <li class="covered" data-hits="2" data-linenumber="14">
           <span class="hits">2</span>
           
           <code class="ruby">      @quality += 2</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">    when 0..5</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="15">
+        <li class="covered" data-hits="2" data-linenumber="16">
           <span class="hits">2</span>
           
           <code class="ruby">      @quality += 3</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="16">
+        <li class="covered" data-hits="2" data-linenumber="17">
           <span class="hits">2</span>
           
           <code class="ruby">    when (-1.0 / 0)..0</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="17">
+        <li class="covered" data-hits="2" data-linenumber="18">
           <span class="hits">2</span>
           
           <code class="ruby">      @quality = 0</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">end</code>
@@ -408,67 +430,73 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="3">
           
-          <code class="ruby">class ConjuredItem &lt; Item</code>
+          
+          <code class="ruby"># this class models the Conjured item type.</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
+          <code class="ruby">class ConjuredItem &lt; Item</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
           <code class="ruby">  def update_sell_in</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="5">
+        <li class="covered" data-hits="4" data-linenumber="6">
           <span class="hits">4</span>
           
           <code class="ruby">    @sell_in -= 1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
+        <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
           <code class="ruby">  def update_quality</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="9">
+        <li class="covered" data-hits="4" data-linenumber="10">
           <span class="hits">4</span>
           
           <code class="ruby">    return if @quality &lt;= 0</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="11">
+        <li class="covered" data-hits="3" data-linenumber="12">
           <span class="hits">3</span>
           
           <code class="ruby">    @quality -= sell_in.negative? ? 4 : 2</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">end</code>
@@ -505,67 +533,73 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="3">
           
-          <code class="ruby">class GenericItem &lt; Item</code>
+          
+          <code class="ruby"># this class models the Generic item type.</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
+          <code class="ruby">class GenericItem &lt; Item</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
           <code class="ruby">  def update_sell_in</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="5">
+        <li class="covered" data-hits="4" data-linenumber="6">
           <span class="hits">4</span>
           
           <code class="ruby">    @sell_in -= 1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
+        <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
           <code class="ruby">  def update_quality</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="9">
+        <li class="covered" data-hits="4" data-linenumber="10">
           <span class="hits">4</span>
           
           <code class="ruby">    return if @quality &lt;= 0</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="11">
+        <li class="covered" data-hits="3" data-linenumber="12">
           <span class="hits">3</span>
           
           <code class="ruby">    @quality -= sell_in.negative? ? 2 : 1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">end</code>
@@ -753,79 +787,85 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="3">
           
-          <code class="ruby">class Item</code>
+          
+          <code class="ruby"># this is the unchangeable SuperClass that other items inherit from.</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
+          <code class="ruby">class Item</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
           <code class="ruby">  attr_accessor :name, :sell_in, :quality</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="never" data-hits="" data-linenumber="6">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
+        <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
           <code class="ruby">  def initialize(name, sell_in, quality)</code>
         </li>
       
-        <li class="covered" data-hits="62" data-linenumber="7">
-          <span class="hits">62</span>
+        <li class="covered" data-hits="63" data-linenumber="8">
+          <span class="hits">63</span>
           
           <code class="ruby">    @name = name</code>
         </li>
       
-        <li class="covered" data-hits="62" data-linenumber="8">
-          <span class="hits">62</span>
+        <li class="covered" data-hits="63" data-linenumber="9">
+          <span class="hits">63</span>
           
           <code class="ruby">    @sell_in = sell_in</code>
         </li>
       
-        <li class="covered" data-hits="62" data-linenumber="9">
-          <span class="hits">62</span>
+        <li class="covered" data-hits="63" data-linenumber="10">
+          <span class="hits">63</span>
           
           <code class="ruby">    @quality = quality</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="10">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="12">
+        <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
           <code class="ruby">  def to_s</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="13">
+        <li class="missed" data-hits="0" data-linenumber="14">
           
           
           <code class="ruby">    &quot;#{@name}, #{@sell_in}, #{@quality}&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">end</code>
@@ -862,31 +902,37 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="3">
           
-          <code class="ruby">class LegendaryItem &lt; Item</code>
+          
+          <code class="ruby"># this class models the Legendary item type.</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
+          <code class="ruby">class LegendaryItem &lt; Item</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
           <code class="ruby">  def update_sell_in; end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="never" data-hits="" data-linenumber="6">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
+        <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
           <code class="ruby">  def update_quality; end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby">end</code>
@@ -1644,6 +1690,115 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="123">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="cb778fd19e8cf7f4a4491bd5d22ec8c001e80328">
+  <div class="header">
+    <h3>spec/units/aged_brie_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>9</b> relevant lines. 
+      <span class="green"><b>9</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;aged_brie&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe AgedBrie do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  before(:each) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @aged_brie = AgedBrie.new(&#39;Aged Brie&#39;, 10, 0)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;#update_sell_in:&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;Reduces sell_in by 1&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      @aged_brie.update_sell_in</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(@aged_brie.sell_in).to eq 9</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;#update_quality&#39; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">end</code>
