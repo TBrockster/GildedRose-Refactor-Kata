@@ -32,7 +32,9 @@ Finally, I debated how to deal with the RuboCop warning for method length on the
 ## Operation
 
 > Open in a REPL, such as IRB or Pry.
+
 > require_relative './lib/gilded_rose.rb'
+
 > Create and instance of GildedRose with an inventory of your choosing, EG:
 
 items = [
