@@ -2,64 +2,15 @@
 
 # handles updating the store inventory at the end of each day.
 class GildedRose
-  LEGENDARY_EXCEPTIONS = ['Sulfuras, Hand of Ragnaros'].freeze
-
   def initialize(items)
     @items = items
   end
 
   def update_inventory
     @items.each do |item|
-      next if LEGENDARY_EXCEPTIONS.include? item.name
-
       item.update_sell_in
       item.update_quality
     end
-  end
-
-  private
-
-  def update_sell_in(item)
-    
-  end
-
-  def update_quality(item)
-    case item.name
-    when 'Backstage passes to a TAFKAL80ETC concert'
-      update_backstage_pass_quality(item)
-    when 'Aged Brie'
-      item.quality += 1
-    when Conjured
-      item.quality -= item.sell_in.negative? ? 4 : 2
-    else
-      
-    end
-    item_quality_boundary_check(item)
-  end
-
-  def update_backstage_pass_quality(item)
-    case item.sell_in
-    when 10..(1.0 / 0)
-      item.quality += 1
-    when 5..9
-      item.quality += 2
-    when 0..5
-      item.quality += 3
-    when (-1.0 / 0)..0
-      item.quality = 0
-    end
-  end
-
-  def item_quality_boundary_check(item)
-    item.quality = 0 if item.quality.negative?
-    item.quality = 50 if item.quality > 50
-  end
-end
-
-# defines if an item is 'conjured'.
-class Conjured
-  def self.===(item)
-    item[0..7].include?('Conjured')
   end
 end
 
@@ -84,6 +35,57 @@ class GenericItem < Item
   end
 
   def update_quality
-    @quality -= sell_in.negative? ? 2 : 1 unless @quality <= 0
+    return if @quality <= 0
+
+    @quality -= sell_in.negative? ? 2 : 1
+  end
+end
+
+class AgedBrie < Item
+  def update_sell_in
+    @sell_in -= 1
+  end
+
+  def update_quality
+    return if @quality >= 50
+
+    @quality += 1
+  end
+end
+
+class LegendaryItem < Item
+  def update_sell_in; end
+
+  def update_quality; end
+end
+
+class BackstagePass < Item
+  def update_sell_in
+    @sell_in -= 1
+  end
+
+  def update_quality
+    case @sell_in
+    when 10..(1.0 / 0)
+      @quality += 1
+    when 5..9
+      @quality += 2
+    when 0..5
+      @quality += 3
+    when (-1.0 / 0)..0
+      @quality = 0
+    end
+  end
+end
+
+class ConjuredItem < Item
+  def update_sell_in
+    @sell_in -= 1
+  end
+
+  def update_quality
+    return if @quality <= 0
+
+    @quality -= sell_in.negative? ? 4 : 2
   end
 end

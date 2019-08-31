@@ -30,8 +30,8 @@ describe GildedRose do
 
     describe 'Aged Brie:' do
       before(:each) do
-        @aged_brie = [Item.new('Aged Brie', 10, 0)]
-        @high_quality_brie = [Item.new('Aged Brie', 10, 50)]
+        @aged_brie = [AgedBrie.new('Aged Brie', 10, 0)]
+        @high_quality_brie = [AgedBrie.new('Aged Brie', 10, 50)]
       end
       it 'Decreases sell_in value by 1.' do
         GildedRose.new(@aged_brie).update_inventory
@@ -49,7 +49,7 @@ describe GildedRose do
 
     describe 'Sulfuras, Hand of Ragnaros:' do
       before(:each) do
-        @sulfuras = [Item.new('Sulfuras, Hand of Ragnaros', 1, 80)]
+        @sulfuras = [LegendaryItem.new('Sulfuras, Hand of Ragnaros', 1, 80)]
       end
       it 'Does not change the sell_in of Sulfuras.' do
         GildedRose.new(@sulfuras).update_inventory
@@ -63,12 +63,12 @@ describe GildedRose do
 
     describe 'Backstage Pass criteria:' do
       before(:each) do
-        @expired_pass = [Item.new('Backstage passes to a TAFKAL80ETC concert', 0, 10)]
-        @one_day_pass = [Item.new('Backstage passes to a TAFKAL80ETC concert', 1, 10)]
-        @five_day_pass = [Item.new('Backstage passes to a TAFKAL80ETC concert', 5, 10)]
-        @six_day_pass = [Item.new('Backstage passes to a TAFKAL80ETC concert', 6, 10)]
-        @ten_day_pass = [Item.new('Backstage passes to a TAFKAL80ETC concert', 10, 10)]
-        @eleven_day_pass = [Item.new('Backstage passes to a TAFKAL80ETC concert', 11, 10)]
+        @expired_pass = [BackstagePass.new('Backstage passes to a TAFKAL80ETC concert', 0, 10)]
+        @one_day_pass = [BackstagePass.new('Backstage passes to a TAFKAL80ETC concert', 1, 10)]
+        @five_day_pass = [BackstagePass.new('Backstage passes to a TAFKAL80ETC concert', 5, 10)]
+        @six_day_pass = [BackstagePass.new('Backstage passes to a TAFKAL80ETC concert', 6, 10)]
+        @ten_day_pass = [BackstagePass.new('Backstage passes to a TAFKAL80ETC concert', 10, 10)]
+        @eleven_day_pass = [BackstagePass.new('Backstage passes to a TAFKAL80ETC concert', 11, 10)]
       end
       it 'Decreases sell_in value by 1.' do
         GildedRose.new(@expired_pass).update_inventory
@@ -98,9 +98,9 @@ describe GildedRose do
 
     describe 'Conjured Items:' do
       before(:each) do
-        @conjured_item = [Item.new('Conjured Mana Cake', 5, 10)]
-        @stale_conjured_item = [Item.new('Conjured Mana Cake', 0, 10)]
-        @low_quality_conjured_item = [Item.new('Conjured Mana Cake', 5, 0)]
+        @conjured_item = [ConjuredItem.new('Conjured Mana Cake', 5, 10)]
+        @stale_conjured_item = [ConjuredItem.new('Conjured Mana Cake', 0, 10)]
+        @low_quality_conjured_item = [ConjuredItem.new('Conjured Mana Cake', 5, 0)]
       end
       it 'Decreases sell_in value by 1.' do
         GildedRose.new(@conjured_item).update_inventory
