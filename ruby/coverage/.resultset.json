@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/student/Documents/projects/GildedRose-Refactoring-Kata/ruby/spec/gilded_rose_spec.rb": [
+      "/Users/student/Documents/projects/GildedRose-Refactoring-Kata/ruby/spec/features/gilded_rose_spec.rb": [
         null,
         null,
         1,
@@ -129,9 +129,15 @@
       "/Users/student/Documents/projects/GildedRose-Refactoring-Kata/ruby/lib/gilded_rose.rb": [
         null,
         null,
-        null,
+        1,
+        1,
+        1,
+        1,
+        1,
         1,
         null,
+        null,
+        1,
         1,
         20,
         null,
@@ -142,13 +148,9 @@
         20,
         null,
         null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
+        null
+      ],
+      "/Users/student/Documents/projects/GildedRose-Refactoring-Kata/ruby/lib/item.rb": [
         null,
         null,
         1,
@@ -163,6 +165,9 @@
         1,
         0,
         null,
+        null
+      ],
+      "/Users/student/Documents/projects/GildedRose-Refactoring-Kata/ruby/lib/generic_item.rb": [
         null,
         null,
         1,
@@ -175,6 +180,9 @@
         null,
         3,
         null,
+        null
+      ],
+      "/Users/student/Documents/projects/GildedRose-Refactoring-Kata/ruby/lib/aged_brie.rb": [
         null,
         null,
         1,
@@ -187,11 +195,18 @@
         null,
         2,
         null,
+        null
+      ],
+      "/Users/student/Documents/projects/GildedRose-Refactoring-Kata/ruby/lib/legendary_item.rb": [
         null,
         null,
         1,
         1,
+        null,
         1,
+        null
+      ],
+      "/Users/student/Documents/projects/GildedRose-Refactoring-Kata/ruby/lib/backstage_pass.rb": [
         null,
         null,
         1,
@@ -211,6 +226,9 @@
         2,
         null,
         null,
+        null
+      ],
+      "/Users/student/Documents/projects/GildedRose-Refactoring-Kata/ruby/lib/conjured_item.rb": [
         null,
         null,
         1,
@@ -226,6 +244,6 @@
         null
       ]
     },
-    "timestamp": 1567290512
+    "timestamp": 1567291241
   }
 }
