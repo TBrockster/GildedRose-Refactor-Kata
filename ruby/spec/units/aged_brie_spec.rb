@@ -11,5 +11,9 @@ describe AgedBrie do
     end
   end
   describe '#update_quality' do
+    it 'Increases quality by 1.' do
+      @aged_brie.update_quality
+      expect(@aged_brie.quality).to eq 1
+    end
   end
 end
