@@ -1,4 +1,4 @@
-#GildedRose-Refactoring-Kata
+## GildedRose-Refactoring-Kata
 
 Please note that all my work resides in the Ruby folder.
 
@@ -16,7 +16,9 @@ The purpose of this kata is to refactor existing complicated code into easy-to-c
 
 ## Approach
 
-At first I found this kata quite frustrating, as it begins in a rather messy nest of 'if-else' statements, seemingly designed to be annoying. On the surface it would be rather simple to add an extra if statement to account for conjured items, or to simply delete the whole thing and start from scratch, but the constraint of small refactoring steps helped solidify my direction. 
+At first I found this kata quite frustrating, as it begins in a rather messy nest of 'if-else' statements, seemingly designed to be annoying. On the surface it would be rather simple to add an extra if statement to account for conjured items, or to simply delete the whole thing and start from scratch, but the constraint of small refactoring steps helped solidify my direction.
+
+My ideal solution would be for every 'type' of item to have its own class, and on that class are defined two methods, 'update_sell_in' and 'update_quality', that will handle each 'types' specific behaviour, with the gilded rose class simply calling item.update_sell_in and item.update_quality on each object in the input array, but I interpreted the 'no changing the item class' requirement to also prevent circumventing it by making other classes. With this in mind I settled on a somewhat more complex case statement on GildedRose, which handles behaviour for different tiems.
 
 I began by writing tests for 'generic items', and then expanding it out for the special functionalities of various items. A restriction on changing the Item class stopped me considering making new classes for the special items, and it meant that I didn't double the Item class in my tests. 
 
