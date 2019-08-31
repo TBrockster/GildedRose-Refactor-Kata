@@ -12,15 +12,15 @@ class GildedRose
     @items.each do |item|
       next if LEGENDARY_EXCEPTIONS.include? item.name
 
-      update_sell_in(item)
-      update_quality(item)
+      item.update_sell_in
+      item.update_quality
     end
   end
 
   private
 
   def update_sell_in(item)
-    item.sell_in -= 1
+    
   end
 
   def update_quality(item)
@@ -32,7 +32,7 @@ class GildedRose
     when Conjured
       item.quality -= item.sell_in.negative? ? 4 : 2
     else
-      item.quality -= item.sell_in.negative? ? 2 : 1
+      
     end
     item_quality_boundary_check(item)
   end
@@ -75,5 +75,15 @@ class Item
 
   def to_s
     "#{@name}, #{@sell_in}, #{@quality}"
+  end
+end
+
+class GenericItem < Item
+  def update_sell_in
+    @sell_in -= 1
+  end
+
+  def update_quality
+    @quality -= sell_in.negative? ? 2 : 1 unless @quality <= 0
   end
 end

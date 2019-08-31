@@ -6,9 +6,9 @@ describe GildedRose do
   describe '#update_inventory:' do
     describe 'Generic Items:' do
       before(:each) do
-        @fresh_item = [Item.new('foo', 200, 50)]
-        @stale_item = [Item.new('foo', 0, 50)]
-        @low_quality_item = [Item.new('foo', 0, 0)]
+        @fresh_item = [GenericItem.new('foo', 200, 50)]
+        @stale_item = [GenericItem.new('foo', 0, 50)]
+        @low_quality_item = [GenericItem.new('foo', 0, 0)]
       end
       it 'Decreases sell_in value by 1.' do
         GildedRose.new(@fresh_item).update_inventory
