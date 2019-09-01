@@ -1,4 +1,6 @@
-def update_quality_and_expect(item, expected_result)
+# frozen_string_literal: true
+
+def update_and_expect_quality(item, expected_result)
   item.update_sell_in
   item.update_quality
   expect(item.quality).to eq(expected_result)

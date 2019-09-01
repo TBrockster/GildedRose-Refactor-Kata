@@ -10,13 +10,13 @@ describe GildedRose do
         @stale_item = [GenericItem.new('foo', 0, 50)]
         @low_quality_item = [GenericItem.new('foo', 0, 0)]
       end
-      it 'Decreases sell_in value by 1.' do
+      it 'Reduces sell_in value by 1.' do
         update_inventory_and_expect_sell_in(@fresh_item, 199)
       end
-      it 'Decreases quality value by 1, while sell_in is 1 or more.' do
+      it 'Reduces quality value by 1, while sell_in is 1 or more.' do
         update_inventory_and_expect_quality(@fresh_item, 49)
       end
-      it 'Decreases quality value by 2, while sell_in is 0 or less.' do
+      it 'Reduces quality value by 2, while sell_in is 0 or less.' do
         update_inventory_and_expect_quality(@stale_item, 48)
       end
       it 'Does not reduce the quality of an item to a negtive amount.' do
