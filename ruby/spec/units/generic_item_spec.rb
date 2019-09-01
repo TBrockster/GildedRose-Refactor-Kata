@@ -23,5 +23,8 @@ describe GenericItem do
     it 'Reduces quality by 2, while sell_in is 0 or less.' do
       update_and_expect_quality(@stale_item, 48)
     end
+    it 'Does nore reduce the quality of an item to a negative amount.' do
+      update_and_expect_quality(@low_quality_item, 0)
+    end
   end
 end
