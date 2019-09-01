@@ -138,9 +138,9 @@
         1,
         null,
         1,
-        134,
-        134,
-        134,
+        136,
+        136,
+        136,
         null,
         null,
         1,
@@ -366,8 +366,32 @@
         null,
         null,
         null
+      ],
+      "/Users/student/Documents/projects/GildedRose-Refactoring-Kata/ruby/spec/units/legendary_item_spec.rb": [
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        2,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1567339152
+    "timestamp": 1567339688
   }
 }
