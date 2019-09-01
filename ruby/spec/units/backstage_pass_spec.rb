@@ -25,5 +25,15 @@ describe BackstagePass do
       @expired_pass.update_quality
       expect(@expired_pass.quality).to eq 0
     end
+    it 'Increases pass quality by 3 while sell_in is between 0 and 5 (0)' do
+      @one_day_pass.update_sell_in
+      @one_day_pass.update_quality
+      expect(@one_day_pass.quality).to eq 13
+    end
+    it 'Increases pass quality by 3 while sell_in is between 0 and 5 (5)' do
+      @five_day_pass.update_sell_in
+      @five_day_pass.update_quality
+      expect(@five_day_pass.quality).to eq 13
+    end
   end
 end
