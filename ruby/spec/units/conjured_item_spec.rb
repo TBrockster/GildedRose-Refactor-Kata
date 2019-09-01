@@ -17,6 +17,8 @@ describe ConjuredItem do
   end
 
   describe '#update_quality' do
-
+    it 'Reduces the quality by 2 while sell_in is 0 or less.' do
+      update_and_expect(@conjured_item, 8)
+    end
   end
 end

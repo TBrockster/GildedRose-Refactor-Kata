@@ -7,7 +7,9 @@ Please note that all my work resides in the Ruby folder.
 First, clone this repository, then:
 
 > cd GildedRose-Refactoring-Kata/ruby
+
 > bundle install
+
 > run 'rspec' in the command line to see test results and coverage
 
 ## Purpose
