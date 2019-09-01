@@ -21,22 +21,22 @@ describe BackstagePass do
 
   describe '#update_quality' do
     it 'Reduces pass quality to 0 when sell_in is less than 0.' do
-      update_and_expect(@expired_pass, 0)
+      update_quality_and_expect(@expired_pass, 0)
     end
     it 'Increases pass quality by 3 while sell_in is between 0 and 5 (0).' do
-      update_and_expect(@one_day_pass, 13)
+      update_quality_and_expect(@one_day_pass, 13)
     end
     it 'Increases pass quality by 3 while sell_in is between 0 and 5 (5).' do
-      update_and_expect(@five_day_pass, 13)
+      update_quality_and_expect(@five_day_pass, 13)
     end
     it 'Increases pass quality by 2 while sell_in is between 6 and 10 (6).' do
-      update_and_expect(@six_day_pass, 12)
+      update_quality_and_expect(@six_day_pass, 12)
     end
     it 'Increases pass quality by 2 while sell_in is between 6 and 10 (10).' do
-      update_and_expect(@ten_day_pass, 12)
+      update_quality_and_expect(@ten_day_pass, 12)
     end
     it 'Increases pass quality by 1 while sell_in is above 10.' do
-      update_and_expect(@eleven_day_pass, 11)
+      update_quality_and_expect(@eleven_day_pass, 11)
     end
   end
 end

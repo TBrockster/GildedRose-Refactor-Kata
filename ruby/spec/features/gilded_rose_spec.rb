@@ -11,20 +11,16 @@ describe GildedRose do
         @low_quality_item = [GenericItem.new('foo', 0, 0)]
       end
       it 'Decreases sell_in value by 1.' do
-        GildedRose.new(@fresh_item).update_inventory
-        expect(@fresh_item[0].sell_in).to eq 199
+        update_inventory_and_expect_sell_in(@fresh_item, 199)
       end
       it 'Decreases quality value by 1, while sell_in is 1 or more.' do
-        GildedRose.new(@fresh_item).update_inventory
-        expect(@fresh_item[0].quality).to eq 49
+        update_inventory_and_expect_quality(@fresh_item, 49)
       end
       it 'Decreases quality value by 2, while sell_in is 0 or less.' do
-        GildedRose.new(@stale_item).update_inventory
-        expect(@stale_item[0].quality).to eq 48
+        update_inventory_and_expect_quality(@stale_item, 48)
       end
       it 'Does not reduce the quality of an item to a negtive amount.' do
-        GildedRose.new(@low_quality_item).update_inventory
-        expect(@low_quality_item[0].quality).to eq 0
+        update_inventory_and_expect_quality(@low_quality_item, 0)
       end
     end
 
@@ -34,16 +30,13 @@ describe GildedRose do
         @high_quality_brie = [AgedBrie.new('Aged Brie', 10, 50)]
       end
       it 'Decreases sell_in value by 1.' do
-        GildedRose.new(@aged_brie).update_inventory
-        expect(@aged_brie[0].sell_in).to eq 9
+        update_inventory_and_expect_sell_in(@aged_brie, 9)
       end
       it 'Increases the quality of Aged Brie.' do
-        GildedRose.new(@aged_brie).update_inventory
-        expect(@aged_brie[0].quality).to eq 1
+        update_inventory_and_expect_quality(@aged_brie, 1)
       end
       it 'Does not increase quality above 50.' do
-        GildedRose.new(@high_quality_brie).update_inventory
-        expect(@high_quality_brie[0].quality).to eq 50
+        update_inventory_and_expect_quality(@high_quality_brie, 50)
       end
     end
 
@@ -52,12 +45,10 @@ describe GildedRose do
         @sulfuras = [LegendaryItem.new('Sulfuras, Hand of Ragnaros', 1, 80)]
       end
       it 'Does not change the sell_in of Sulfuras.' do
-        GildedRose.new(@sulfuras).update_inventory
-        expect(@sulfuras[0].sell_in).to eq 1
+        update_inventory_and_expect_sell_in(@sulfuras, 1)
       end
       it 'Does not change the quality of Sulfuras.' do
-        GildedRose.new(@sulfuras).update_inventory
-        expect(@sulfuras[0].quality).to eq 80
+        update_inventory_and_expect_quality(@sulfuras, 80)
       end
     end
 
@@ -71,28 +62,21 @@ describe GildedRose do
         @eleven_day_pass = [BackstagePass.new('Backstage passes to a TAFKAL80ETC concert', 11, 10)]
       end
       it 'Decreases sell_in value by 1.' do
-        GildedRose.new(@expired_pass).update_inventory
-        expect(@expired_pass[0].sell_in).to eq(-1)
+        update_inventory_and_expect_sell_in(@expired_pass, -1)
       end
       it 'Reduces pass quality to 0 when sell_in is less than 0.' do
-        GildedRose.new(@expired_pass).update_inventory
-        expect(@expired_pass[0].quality).to eq 0
+        update_inventory_and_expect_quality(@expired_pass, 0)
       end
       it 'Increases pass quality by 3 while sell_in is between 0 and 5.' do
-        GildedRose.new(@one_day_pass).update_inventory
-        expect(@one_day_pass[0].quality).to eq 13
-        GildedRose.new(@five_day_pass).update_inventory
-        expect(@five_day_pass[0].quality).to eq 13
+        update_inventory_and_expect_quality(@one_day_pass, 13)
+        update_inventory_and_expect_quality(@five_day_pass, 13)
       end
       it 'Increases pass quality by 2 while sell_in is between 6 and 10.' do
-        GildedRose.new(@six_day_pass).update_inventory
-        expect(@six_day_pass[0].quality).to eq 12
-        GildedRose.new(@ten_day_pass).update_inventory
-        expect(@ten_day_pass[0].quality).to eq 12
+        update_inventory_and_expect_quality(@six_day_pass, 12)
+        update_inventory_and_expect_quality(@ten_day_pass, 12)
       end
       it 'Increases pass quality by 1 while sell_in is above 10.' do
-        GildedRose.new(@eleven_day_pass).update_inventory
-        expect(@eleven_day_pass[0].quality).to eq 11
+        update_inventory_and_expect_quality(@eleven_day_pass, 11)
       end
     end
 
@@ -103,20 +87,16 @@ describe GildedRose do
         @low_quality_conjured_item = [ConjuredItem.new('Conjured Mana Cake', 5, 0)]
       end
       it 'Decreases sell_in value by 1.' do
-        GildedRose.new(@conjured_item).update_inventory
-        expect(@conjured_item[0].sell_in).to eq(4)
+        update_inventory_and_expect_sell_in(@conjured_item, 4)
       end
       it 'Reduces the quality of conjured items by 2 while sell_in is 0 or less.' do
-        GildedRose.new(@conjured_item).update_inventory
-        expect(@conjured_item[0].quality).to eq 8
+        update_inventory_and_expect_quality(@conjured_item, 8)
       end
       it 'Reduces the quality of conjured items by 4 while sell_in is less than 0.' do
-        GildedRose.new(@stale_conjured_item).update_inventory
-        expect(@stale_conjured_item[0].quality).to eq 6
+        update_inventory_and_expect_quality(@stale_conjured_item, 6)
       end
       it 'Does not reduce the quality of an item to a negtive amount.' do
-        GildedRose.new(@low_quality_conjured_item).update_inventory
-        expect(@low_quality_conjured_item[0].quality).to eq 0
+        update_inventory_and_expect_quality(@low_quality_conjured_item, 0)
       end
     end
   end
