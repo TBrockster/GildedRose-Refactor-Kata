@@ -1,6 +1,12 @@
 # frozen_string_literal: true
 
+require 'aged_brie'
+require 'backstage_pass'
+require 'conjured_item'
+require 'generic_item'
 require 'gilded_rose'
+require 'item'
+require 'legendary_item'
 
 describe GildedRose do
   describe '#update_inventory:' do

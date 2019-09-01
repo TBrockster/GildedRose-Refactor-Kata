@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'item'
+
 # this class models the Generic item type.
 class GenericItem < Item
   def update_sell_in

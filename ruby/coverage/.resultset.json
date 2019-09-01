@@ -1,9 +1,15 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/student/Documents/projects/GildedRose-Refactoring-Kata/ruby/spec/features/gilded_rose_spec.rb": [
+      "/Users/student/Documents/projects/GildedRose-Refactoring-Kata/ruby/spec/features/gilded_rose_feature_spec.rb": [
         null,
         null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         1,
         null,
         1,
@@ -106,27 +112,21 @@
         null,
         null
       ],
-      "/Users/student/Documents/projects/GildedRose-Refactoring-Kata/ruby/lib/gilded_rose.rb": [
+      "/Users/student/Documents/projects/GildedRose-Refactoring-Kata/ruby/lib/aged_brie.rb": [
         null,
         null,
-        1,
-        1,
-        1,
-        1,
-        1,
         1,
         null,
         null,
         1,
         1,
-        20,
+        4,
         null,
         null,
         1,
-        20,
-        20,
-        20,
+        5,
         null,
+        3,
         null,
         null
       ],
@@ -148,50 +148,10 @@
         null,
         null
       ],
-      "/Users/student/Documents/projects/GildedRose-Refactoring-Kata/ruby/lib/generic_item.rb": [
-        null,
-        null,
-        null,
-        1,
-        1,
-        8,
-        null,
-        null,
-        1,
-        7,
-        null,
-        5,
-        null,
-        null
-      ],
-      "/Users/student/Documents/projects/GildedRose-Refactoring-Kata/ruby/lib/aged_brie.rb": [
-        null,
-        null,
-        null,
-        1,
-        1,
-        4,
-        null,
-        null,
-        1,
-        5,
-        null,
-        3,
-        null,
-        null
-      ],
-      "/Users/student/Documents/projects/GildedRose-Refactoring-Kata/ruby/lib/legendary_item.rb": [
-        null,
-        null,
-        null,
-        1,
-        1,
-        null,
-        1,
-        null
-      ],
       "/Users/student/Documents/projects/GildedRose-Refactoring-Kata/ruby/lib/backstage_pass.rb": [
         null,
+        null,
+        1,
         null,
         null,
         1,
@@ -216,6 +176,8 @@
       "/Users/student/Documents/projects/GildedRose-Refactoring-Kata/ruby/lib/conjured_item.rb": [
         null,
         null,
+        1,
+        null,
         null,
         1,
         1,
@@ -227,6 +189,53 @@
         null,
         5,
         null,
+        null
+      ],
+      "/Users/student/Documents/projects/GildedRose-Refactoring-Kata/ruby/lib/generic_item.rb": [
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        8,
+        null,
+        null,
+        1,
+        7,
+        null,
+        5,
+        null,
+        null
+      ],
+      "/Users/student/Documents/projects/GildedRose-Refactoring-Kata/ruby/lib/gilded_rose.rb": [
+        null,
+        null,
+        null,
+        1,
+        1,
+        22,
+        null,
+        null,
+        1,
+        22,
+        22,
+        22,
+        null,
+        null,
+        null
+      ],
+      "/Users/student/Documents/projects/GildedRose-Refactoring-Kata/ruby/lib/legendary_item.rb": [
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
         null
       ],
       "/Users/student/Documents/projects/GildedRose-Refactoring-Kata/ruby/spec/units/aged_brie_spec.rb": [
@@ -367,6 +376,28 @@
         null,
         null
       ],
+      "/Users/student/Documents/projects/GildedRose-Refactoring-Kata/ruby/spec/units/gilded_rose_spec.rb": [
+        null,
+        null,
+        1,
+        null,
+        1,
+        3,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "/Users/student/Documents/projects/GildedRose-Refactoring-Kata/ruby/spec/units/item_spec.rb": [
         null,
         null,
@@ -409,6 +440,6 @@
         null
       ]
     },
-    "timestamp": 1567340446
+    "timestamp": 1567343028
   }
 }
