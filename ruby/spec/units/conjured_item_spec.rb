@@ -23,7 +23,7 @@ describe ConjuredItem do
     it 'Reduces the quality by 4 while sell_in is less than 0.' do
       update_and_expect_quality(@stale_conjured_item, 6)
     end
-    it 'Does not reduce the quality of an item to a negative amount' do
+    it 'Does not reduce the quality of an item to a negative amount.' do
       update_and_expect_quality(@low_quality_conjured_item, 0)
     end
   end
