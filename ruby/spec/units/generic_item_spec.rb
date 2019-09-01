@@ -20,5 +20,8 @@ describe GenericItem do
     it 'Reduces quality by 1, while sell_in is 1 or more.' do
       update_and_expect_quality(@fresh_item, 49)
     end
+    it 'Reduces quality by 2, while sell_in is 0 or less.' do
+      update_and_expect_quality(@stale_item, 48)
+    end
   end
 end
