@@ -14,8 +14,7 @@ describe BackstagePass do
 
   describe '#update_sell_in:' do
     it 'Reduces sell_in by 1.' do
-      @expired_pass.update_sell_in
-      expect(@expired_pass.sell_in).to eq(-1)
+      update_and_expect_sell_in(@expired_pass, -1)
     end
   end
 
