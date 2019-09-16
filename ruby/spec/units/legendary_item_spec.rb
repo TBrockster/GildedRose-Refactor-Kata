@@ -9,8 +9,7 @@ describe GenericItem do
 
   describe '#update_sell_in:' do
     it 'Does not reduce sell_in.' do
-      @sulfuras.update_sell_in
-      expect(@sulfuras.sell_in).to eq 1
+      update_and_expect_sell_in(@sulfuras, 1)
     end
   end
 
