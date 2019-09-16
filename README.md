@@ -41,7 +41,7 @@ require_relative './lib/gilded_rose.rb'
 
 Create and instance of GildedRose with an inventory of your choosing, EG:
 
-`items = [
+```items = [
   Item.new(name = '+5 Dexterity Vest', sell_in = 10, quality = 20),
   
   Item.new(name = 'Aged Brie', sell_in = 2, quality = 0),
@@ -63,6 +63,6 @@ Create and instance of GildedRose with an inventory of your choosing, EG:
 
 my_gilded_rose = GildedRose.new(items)
 
-my_gilded_rose.update_inventory`
+my_gilded_rose.update_inventory```
 
 You will need to use a custom each loop to extract the altered values from the items.
