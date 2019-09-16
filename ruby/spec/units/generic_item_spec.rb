@@ -11,8 +11,7 @@ describe GenericItem do
 
   describe '#update_sell_in:' do
     it 'Reduces sell_in by 1.' do
-      @fresh_item.update_sell_in
-      expect(@fresh_item.sell_in).to eq 199
+      update_and_expect_sell_in(@fresh_item, 199)
     end
   end
 
