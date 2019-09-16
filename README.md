@@ -6,11 +6,11 @@ Please note that all my work resides in the Ruby folder.
 
 First, clone this repository, then:
 
-> cd GildedRose-Refactoring-Kata/ruby
+cd GildedRose-Refactoring-Kata/ruby
 
-> bundle install
+bundle install
 
-> run 'rspec' in the command line to see test results and coverage
+run 'rspec' in the command line to see test results and coverage
 
 ## Purpose
 
@@ -31,14 +31,17 @@ Once the entire 'if-else' statement had been moved into the 'case' statement, I 
 Another issue was reducing the cyclomatic complexity of the 'update_quality' method, which lead to backstage passes having their own 'update_backstage_pass_quality' method, and lead to the item_quality_boundary_check method. 
 Finally, I debated how to deal with the RuboCop warning for method length on the 'update_quality' method, but ultimately decided that going over 10 LoC is inevitable in some case statements, and anything I did to bring it under that value would make the could less readable, less changeable, and therefore worse.
 
+After this point I finally decided to drop my imaginary requirement to only use the 'item' class, so I decided to instead create a bunch of different item child classes (inheriting from 'item'), for each item type, and define the necessary methods there instead. After this, I created a Default Behaviour module, defining the default functionality of 'update_sell_in' and 'update_quality', and included it in each new child class.
+
 ## Operation
 
-> Open in a REPL, such as IRB or Pry.
+Open in a REPL, such as IRB or Pry.
 
-> require_relative './lib/gilded_rose.rb'
+require_relative './lib/gilded_rose.rb'
 
-> Create and instance of GildedRose with an inventory of your choosing, EG:
+Create and instance of GildedRose with an inventory of your choosing, EG:
 
+```
 items = [
   Item.new(name = '+5 Dexterity Vest', sell_in = 10, quality = 20),
   
@@ -62,5 +65,6 @@ items = [
 my_gilded_rose = GildedRose.new(items)
 
 my_gilded_rose.update_inventory
+```
 
 You will need to use a custom each loop to extract the altered values from the items.
