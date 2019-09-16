@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module DefaultBehaviour
   def update_sell_in
     @sell_in -= 1

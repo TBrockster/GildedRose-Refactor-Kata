@@ -6,7 +6,7 @@ require 'default_behaviour_module'
 # this class models the BackstagePass item type.
 class BackstagePass < Item
   include DefaultBehaviour
-  
+
   def update_quality
     case @sell_in
     when 10..(1.0 / 0)
