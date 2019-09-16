@@ -17,12 +17,10 @@ describe AgedBrie do
 
   describe '#update_quality' do
     it 'Increases quality by 1.' do
-      @aged_brie.update_quality
-      expect(@aged_brie.quality).to eq 1
+      update_and_expect_quality(@aged_brie, 1)
     end
     it 'Does not raise quality above 50.' do
-      @high_quality_brie.update_quality
-      expect(@high_quality_brie.quality).to eq 50
+      update_and_expect_quality(@high_quality_brie, 50)
     end
   end
 end
