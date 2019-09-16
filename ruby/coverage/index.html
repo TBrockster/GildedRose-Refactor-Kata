@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-09-01T14:03:48+01:00">2019-09-01T14:03:48+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-09-16T10:07:47+01:00">2019-09-16T10:07:47+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         4.02
+         4.0
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>15</b> files in total.
-    <b>230</b> relevant lines. 
-    <span class="green"><b>230</b> lines covered</span> and
+    <b>16</b> files in total.
+    <b>233</b> relevant lines. 
+    <span class="green"><b>233</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -53,41 +53,51 @@
       <tr>
         <td class="strong"><a href="#a480bf582efeba3f66f4eefa49249fef866f8dc0" class="src_link" title="lib/aged_brie.rb">lib/aged_brie.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>16</td>
+        <td>14</td>
         <td>7</td>
         <td>7</td>
         <td>0</td>
-        <td>2.3</td>
+        <td>1.9</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#e8536110429f3a593b2ccb9424241418f7dd7e30" class="src_link" title="lib/backstage_pass.rb">lib/backstage_pass.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>23</td>
+        <td>22</td>
         <td>12</td>
         <td>12</td>
         <td>0</td>
-        <td>5.0</td>
+        <td>3.9</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#cc05719fe141d369164ccb0fdd843b15ce72964b" class="src_link" title="lib/conjured_item.rb">lib/conjured_item.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>16</td>
+        <td>15</td>
         <td>7</td>
         <td>7</td>
         <td>0</td>
-        <td>3.4</td>
+        <td>2.4</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#918444d82801d9e128bc58719a927287ab661dad" class="src_link" title="lib/default_behaviour_module.rb">lib/default_behaviour_module.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>11</td>
+        <td>6</td>
+        <td>6</td>
+        <td>0</td>
+        <td>8.2</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#47741bc8a6a925facd4ce50f15f1fe34af84875e" class="src_link" title="lib/generic_item.rb">lib/generic_item.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>16</td>
-        <td>7</td>
-        <td>7</td>
+        <td>9</td>
+        <td>4</td>
+        <td>4</td>
         <td>0</td>
-        <td>3.4</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -248,79 +258,67 @@
           <code class="ruby">require &#39;item&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">require &#39;default_behaviour_module&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
           
           
-          <code class="ruby"># this class models the AgedBrie item type.</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="6">
           
-          <code class="ruby">class AgedBrie &lt; Item</code>
+          
+          <code class="ruby"># this class models the AgedBrie item type.</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">  def update_sell_in</code>
+          <code class="ruby">class AgedBrie &lt; Item</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="8">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
           
-          <code class="ruby">    @sell_in -= 1</code>
+          <code class="ruby">  include DefaultBehaviour</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="10">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
           <code class="ruby">  def update_quality</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="12">
+        <li class="covered" data-hits="5" data-linenumber="10">
           <span class="hits">5</span>
           
           <code class="ruby">    return if @quality &gt;= 50</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="14">
+        <li class="covered" data-hits="3" data-linenumber="12">
           <span class="hits">3</span>
           
           <code class="ruby">    @quality += 1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">end</code>
@@ -363,121 +361,115 @@
           <code class="ruby">require &#39;item&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">require &#39;default_behaviour_module&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
           
           
-          <code class="ruby"># this class models the BackstagePass item type.</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="6">
           
-          <code class="ruby">class BackstagePass &lt; Item</code>
+          
+          <code class="ruby"># this class models the BackstagePass item type.</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">  def update_sell_in</code>
+          <code class="ruby">class BackstagePass &lt; Item</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="8">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
           
-          <code class="ruby">    @sell_in -= 1</code>
+          <code class="ruby">  include DefaultBehaviour</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">  </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
           <code class="ruby">  def update_quality</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="12">
+        <li class="covered" data-hits="13" data-linenumber="11">
           <span class="hits">13</span>
           
           <code class="ruby">    case @sell_in</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="13">
+        <li class="covered" data-hits="13" data-linenumber="12">
           <span class="hits">13</span>
           
           <code class="ruby">    when 10..(1.0 / 0)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="14">
+        <li class="covered" data-hits="2" data-linenumber="13">
           <span class="hits">2</span>
           
           <code class="ruby">      @quality += 1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">    when 5..9</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="16">
+        <li class="covered" data-hits="4" data-linenumber="15">
           <span class="hits">4</span>
           
           <code class="ruby">      @quality += 2</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">    when 0..5</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="18">
+        <li class="covered" data-hits="4" data-linenumber="17">
           <span class="hits">4</span>
           
           <code class="ruby">      @quality += 3</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="19">
+        <li class="covered" data-hits="3" data-linenumber="18">
           <span class="hits">3</span>
           
           <code class="ruby">    when (-1.0 / 0)..0</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="20">
+        <li class="covered" data-hits="3" data-linenumber="19">
           <span class="hits">3</span>
           
           <code class="ruby">      @quality = 0</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby">end</code>
@@ -520,79 +512,158 @@
           <code class="ruby">require &#39;item&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">require &#39;default_behaviour_module&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
           
           
-          <code class="ruby"># this class models the Conjured item type.</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="6">
           
-          <code class="ruby">class ConjuredItem &lt; Item</code>
+          
+          <code class="ruby"># this class models the Conjured item type.</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">  def update_sell_in</code>
+          <code class="ruby">class ConjuredItem &lt; Item</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="8">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
           
-          <code class="ruby">    @sell_in -= 1</code>
+          <code class="ruby">  include DefaultBehaviour</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">  </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
           <code class="ruby">  def update_quality</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="12">
+        <li class="covered" data-hits="7" data-linenumber="11">
           <span class="hits">7</span>
           
           <code class="ruby">    return if @quality &lt;= 0</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="14">
+        <li class="covered" data-hits="5" data-linenumber="13">
           <span class="hits">5</span>
           
           <code class="ruby">    @quality -= sell_in.negative? ? 4 : 2</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="918444d82801d9e128bc58719a927287ab661dad">
+  <div class="header">
+    <h3>lib/default_behaviour_module.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>6</b> relevant lines. 
+      <span class="green"><b>6</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">module DefaultBehaviour</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def update_sell_in</code>
+        </li>
+      
+        <li class="covered" data-hits="34" data-linenumber="3">
+          <span class="hits">34</span>
+          
+          <code class="ruby">    @sell_in -= 1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def update_quality</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="7">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    return if @quality &lt;= 0</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="9">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    @quality -= sell_in.negative? ? 2 : 1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">end</code>
@@ -608,8 +679,8 @@
     <h3>lib/generic_item.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>7</b> relevant lines. 
-      <span class="green"><b>7</b> lines covered</span> and
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -635,79 +706,37 @@
           <code class="ruby">require &#39;item&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">require &#39;default_behaviour_module&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
           
           
-          <code class="ruby"># this class models the Generic item type.</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="6">
           
-          <code class="ruby">class GenericItem &lt; Item</code>
+          
+          <code class="ruby"># this class models the Generic item type.</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">  def update_sell_in</code>
+          <code class="ruby">class GenericItem &lt; Item</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="8">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
           
-          <code class="ruby">    @sell_in -= 1</code>
+          <code class="ruby">  include DefaultBehaviour</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="10">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="11">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def update_quality</code>
-        </li>
-      
-        <li class="covered" data-hits="7" data-linenumber="12">
-          <span class="hits">7</span>
-          
-          <code class="ruby">    return if @quality &lt;= 0</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="13">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="5" data-linenumber="14">
-          <span class="hits">5</span>
-          
-          <code class="ruby">    @quality -= sell_in.negative? ? 2 : 1</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="15">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">end</code>

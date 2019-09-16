@@ -1,13 +1,12 @@
 # frozen_string_literal: true
 
 require 'item'
+require 'default_behaviour_module'
 
 # this class models the BackstagePass item type.
 class BackstagePass < Item
-  def update_sell_in
-    @sell_in -= 1
-  end
-
+  include DefaultBehaviour
+  
   def update_quality
     case @sell_in
     when 10..(1.0 / 0)
