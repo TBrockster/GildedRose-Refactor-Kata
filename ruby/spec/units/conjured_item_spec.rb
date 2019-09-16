@@ -11,8 +11,7 @@ describe ConjuredItem do
 
   describe '#update_sell_in:' do
     it 'Reduces sell_in by 1.' do
-      @conjured_item.update_sell_in
-      expect(@conjured_item.sell_in).to eq 4
+      update_and_expect_sell_in(@conjured_item, 4)
     end
   end
 
